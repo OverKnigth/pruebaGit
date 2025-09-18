@@ -1,15 +1,19 @@
+saludar = function (){
+    let nombre = recuperarTexto("txtSaludo");
+    let apellido = recuperarTexto("txtApellido");
+    let edad = recuperarInt("txtEdad");
+    let mensajeBienvenida = "hola " + nombre + " " + apellido + " tienes " + edad + " años y mides " + recuperarFloat("txtEstatura");
+    mostrarTexto("lblResultado", mensajeBienvenida);
+}
 recuperarTexto = function(idComponente){
     let cmpValor = document.getElementById(idComponente);
     let valor = cmpValor.value;
     return valor;
 }
 
-saludar = function (){
-    let nombre = recuperarTexto("txtSaludo");
-    let apellido = recuperarTexto("txtApellido");
-    let edad = recuperarInt("txtEdad");
-    let estatura = recuperarFloat("txtEstatura");
-    console.log("Hola " + nombre + " " + apellido + ", tienes " + edad + " años y mides " + estatura);
+mostrarTexto = function(idComponente, mensaje){
+    let cmpMensaje = document.getElementById(idComponente);
+    cmpMensaje.innerHTML = mensaje;
 }
 
 recuperarInt = function(idComponente){
