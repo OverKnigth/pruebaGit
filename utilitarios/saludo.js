@@ -1,10 +1,11 @@
 saludar = function (){
-    let nombre = recuperarTexto("txtSaludo");
+    let nombre = recuperarTexto("txtNombre");
     let apellido = recuperarTexto("txtApellido");
     let edad = recuperarInt("txtEdad");
     let mensajeBienvenida = "hola " + nombre + " " + apellido + " tienes " + edad + " años y mides " + recuperarFloat("txtEstatura");
     mostrarTexto("lblResultado", mensajeBienvenida);
     mostrarImagen("imgSaludo", "./img/saludo.gif");
+    mostrarTextoCaja("txtNombre", "");
 }
 recuperarTexto = function(idComponente){
     let cmpValor = document.getElementById(idComponente);
@@ -20,6 +21,11 @@ mostrarImagen = function(idComponente, rutaImg){
 mostrarTexto = function(idComponente, mensaje){
     let cmpMensaje = document.getElementById(idComponente);
     cmpMensaje.innerHTML = mensaje;
+}
+
+mostrarTextoCaja = function(idComponente, mensaje){
+    let cmpMensaje = document.getElementById(idComponente);
+    cmpMensaje.value = mensaje;
 }
 
 recuperarInt = function(idComponente){
