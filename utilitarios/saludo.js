@@ -4,11 +4,17 @@ saludar = function (){
     let edad = recuperarInt("txtEdad");
     let mensajeBienvenida = "hola " + nombre + " " + apellido + " tienes " + edad + " años y mides " + recuperarFloat("txtEstatura");
     mostrarTexto("lblResultado", mensajeBienvenida);
+    mostarrImagen("imgSaludo", "./img/saludo.gif");
 }
 recuperarTexto = function(idComponente){
     let cmpValor = document.getElementById(idComponente);
     let valor = cmpValor.value;
     return valor;
+}
+
+mostarrImagen = function(idComponente, rutaImg){
+    let cmpImagen = document.getElementById(idComponente);
+    cmpImagen.src = rutaImg;
 }
 
 mostrarTexto = function(idComponente, mensaje){
