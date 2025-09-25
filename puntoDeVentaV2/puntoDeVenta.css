@@ -1,0 +1,102 @@
+body{
+    background-color: rgb(27, 45, 61);
+    background-size: cover;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-family: Arial;
+}
+
+.principal{
+    display: flex;
+    background-color: rgba(240, 248, 255, 0.8);
+    margin-left: 0px;
+    margin-right:0px;
+    flex-direction: row;
+    border-radius: 5px;
+}
+
+.logo{
+    display: flex;
+    flex:1;
+    justify-content: center;
+    align-items: center;
+}
+
+.formulario{
+    display: flex;
+    flex:1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.resultados{
+    display: flex;
+    flex:1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.resumen{
+    display: flex;
+    flex:1;
+    justify-content: center;
+    align-items: center;
+    color: aliceblue;
+}
+
+.titulo{
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    color: aliceblue;
+}
+
+.btnUno{
+    background-color: rgb(28, 187, 28);
+    color: aliceblue;
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 150px;
+    border-radius: 10px;
+    border: none;
+}
+
+.btnDos{
+    background-color: red;
+    color: aliceblue;
+    padding: 10px;
+    width: 150px;
+    border-radius: 10px;
+    border: none;
+    margin-bottom: 10px;
+}
+
+.error{
+    color: red;
+    font-size: 16px;
+}
+
+.campos{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    
+}
+
+
+input{
+    display: flex;
+    align-self: center;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    border: none;
+    width: 200px;    
+}
