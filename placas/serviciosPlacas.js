@@ -16,7 +16,7 @@ validarEstructura = function(placa){
         hayError = true;
     }
     if(esDigito(placa.charAt(4)) == false || esDigito(placa.charAt(5)) == false || esDigito(placa.charAt(6)) == false){
-        mostrarTexto("lblError4", "La placa debe contener 3 digitos, despues del guion");
+        mostrarTexto("lblError4", "La placa debe contener 3 o 4 digitos, despues del guion");
         hayError = true;
     }
     if(esDigito(ultimoDigito) == false){
