@@ -128,3 +128,26 @@ obtenerTipoVehiculo = function(placa){
     }
     return vehiculo;
 }
+
+obtenerDiaPicoYPlaca = function(placa){
+    let caracter = placa.length - 1;
+    let ultimoDigito = placa.charAt(caracter); 
+    let dia = "";
+
+    if(ultimoDigito == 1 || ultimoDigito == 2){
+        dia = "Lunes"
+    }
+    if(ultimoDigito == 3 || ultimoDigito == 4){
+        dia = "Martes"
+    }
+    if(ultimoDigito == 5 || ultimoDigito == 6){
+        dia = "Miercoles"
+    }
+    if(ultimoDigito == 7 || ultimoDigito == 8){
+        dia = "Jueves"
+    }
+    if(ultimoDigito == 9 || ultimoDigito == 0){
+        dia = "Viernes"
+    }
+    return dia;
+}

@@ -11,6 +11,8 @@ validarPlaca = function(){
         }
         let vehiculo = obtenerTipoVehiculo(placa)
         mostrarTexto("lblVehiculo", vehiculo)
+        let dia = obtenerDiaPicoYPlaca(placa)
+        mostrarTexto("lblPicoYPlaca", dia)
     } else{
         mostrarTexto("lblErrorEstructura", "Estructura Invalida")
     }
