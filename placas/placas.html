@@ -1,29 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>RETO PLACAS</title>
-    <link rel="stylesheet" href="placas.css">
+    <link rel="stylesheet" href="placas.css" />
     <script src="placas.js"></script>
     <script src="utilitarios.js"></script>
     <script src="serviciosPlacas.js"></script>
     <script src="utilitariosCadenas.js"></script>
-</head>
-<body>
-    <h1>Ejercicio Placas</h1>
-    <h2>Ingresa tu placa:</h2>
-    <input type="text" id="txtPlaca">
-    <input type="button" value="Validar" onclick="validarPlaca()">
-    <h2 id="lblErrorEstructura"></h2>
-    <h2 id="lblProvincia"></h2>
-    <h2 id="lblVehiculo"></h2>
-    <h2 id="lblPicoYPlaca"></h2>
-    <h2 id="lblError1"></h2>
-    <h2 id="lblError2"></h2>
-    <h2 id="lblError3"></h2>
-    <h2 id="lblError4"></h2>
-    <h2 id="lblError5"></h2>
-    
-</body>
+  </head>
+  <body>
+    <h1>Información de Placas</h1>
+    <h1>Ingresa la placa de tu auto y conoce su información.</h1>
+    <div class="formulario">
+      <div class="tituloF">
+        <h2>Ingresa tu placa:</h2>
+      </div>
+      <input type="text" id="txtPlaca" class="placa" />
+      <div class="botones">
+        <input
+          type="button"
+          value="Validar"
+          onclick="validarPlaca()"
+          class="btnValidar"
+        />
+        <input
+          type="button"
+          value="Limpiar"
+          onclick="limpiar()"
+          class="btnLimpiar"
+        />
+      </div>
+
+      <div class="resultados">
+        <h2 id="lblEstructuraValida" class="valido"></h2>
+        <h2 id="lblDatos"></h2>
+        <h2 id="lblEstructuraInvalida" class="invalido"></h2>
+        <h2 id="lblProvincia"></h2>
+        <h2 id="lblVehiculo"></h2>
+        <h2 id="lblPicoYPlaca"></h2>
+      </div>
+      <div class="errores">
+        <h3 id="lblError1"></h3>
+        <h3 id="lblError2"></h3>
+        <h3 id="lblError3"></h3>
+        <h3 id="lblError4"></h3>
+        <h3 id="lblError5"></h3>
+      </div>
+    </div>
+  </body>
 </html>
