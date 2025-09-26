@@ -1,0 +1,105 @@
+body {
+  background-image: url(img/fondoJuego.jpg);
+  background-size: cover;
+}
+
+h1 {
+  color: black;
+  text-align: center;
+  font-size: 50px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.contenido {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.contenidoJugador {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(240, 248, 255, 0.552);
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 400px;
+}
+
+.contenidoComputadora {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(240, 248, 255, 0.552);
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 400px;
+}
+
+.nuevaPartida {
+  display: flex;
+  justify-content: center;
+}
+
+.btnNuevaPartida {
+  border: none;
+  align-items: center;
+  background-color: rgb(64, 183, 64);
+  color: white;
+  border-radius: 10px;
+  padding: 20px;
+  font-size: 20px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.puntajes {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(240, 248, 255, 0.552);
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 900px;
+  text-align: center;
+}
+
+.puntajeUsuario{
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+}
+
+.puntajeComputadora{
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+}
+
+.resultado{
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+}
+
+.ganador{
+    border-radius: 10px;
+    color: #FFF5E1;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 600px;
+    text-align: center;
+}

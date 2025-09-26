@@ -7,14 +7,15 @@ obtenerAleatorio = function () {
 };
 
 generarElemento = function () {
+  let valor = obtenerAleatorio();
   let cadena = "";
-  if (obtenerAleatorio() == 1) {
+  if (valor == 1) {
     cadena = "piedra";
   }
-  if (obtenerAleatorio() == 2) {
+  if (valor == 2) {
     cadena = "papel";
   }
-  if (obtenerAleatorio() == 3) {
+  if (valor == 3) {
     cadena = "tijera";
   }
   return cadena;
@@ -36,16 +37,16 @@ determinarGanador = function (eleccionJugador1, eleccionJugador2) {
   return ganador;
 };
 
-generarRuta = function(nombre){
-    let ruta = "";
-    if(nombre == "tijera"){
-        ruta = "./img/tijera.png";
-    }
-    if(nombre == "piedra"){
-        ruta = "./img/piedra.png";
-    }
-    if(nombre == "papel"){
-        ruta = "./img/papel.png";
-    }
-    return ruta;
-}
+generarRuta = function (nombre) {
+  let ruta = "";
+  if (nombre == "tijera") {
+    ruta = "./img/tijera.png";
+  }
+  if (nombre == "piedra") {
+    ruta = "./img/piedra.png";
+  }
+  if (nombre == "papel") {
+    ruta = "./img/papel.png";
+  }
+  return ruta;
+};

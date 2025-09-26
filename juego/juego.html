@@ -1,26 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PIEDRA, PAPEL O TIJERA</title>
-    <link rel="stylesheet" href="juego.css">
+    <link rel="stylesheet" href="juego.css" />
     <script src="juego.js"></script>
     <script src="utilitarios.js"></script>
     <script src="serviciosJuego.js"></script>
-</head>
-<body>
-    <h1>JUEGA: PIEDRA, PAPEL O TIJERA</h1>
-    <img src="img/piedra.png" width="100px" onclick="jugar('piedra');">
-    <img src="img/papel.png" width="100px" onclick="jugar('papel');">
-    <img src="img/tijera.png" width="100px" onclick="jugar('tijera');">
-    <img src="" width="100px" id="imgComputadora">
-    <input type="button" value="Nueva Partida" onclick="limpiar();">
-    <h2 id="lblResultado"></h2>
-    <h2>Puntaje de Usuario: </h2>
-    <h2 id="lblPuntajeUsuario">0</h2>
-    <h2>Puntaje de Computadora: </h2>
-    <h2 id="lblPuntajeComputadora">0</h2>
-    <h1 id="lblGanador"></h1>
-</body>
+  </head>
+  <body>
+    <h1>¡JUEGA: PIEDRA, PAPEL O TIJERA!</h1>
+    <div class="contenido">
+      <div class="contenidoJugador">
+        <div class="tituloJ">
+          <h2>Tu elección:</h2>
+        </div>
+        <div class="imgJugador">
+          <img src="img/piedra.png" width="100px" onclick="jugar('piedra');" />
+          <img src="img/papel.png" width="100px" onclick="jugar('papel');" />
+          <img src="img/tijera.png" width="100px" onclick="jugar('tijera');" />
+        </div>
+        <div class="tituloJ">
+          <h2 id="lblUsuario"></h2>
+        </div>
+      </div>
+      <div class="contenidoComputadora">
+        <div class="tituloC">
+          <h2>Elección de la computadora:</h2>
+        </div>
+        <div class="imgComputadora">
+          <img src=" " width="100px" id="imgComputadora" />
+        </div>
+             <div class="tituloC">
+          <h2 id="lblComputadora"></h2>
+        </div>
+      </div>
+    </div>
+    <div class="nuevaPartida">
+      <input
+        type="button"
+        value="Nueva Partida"
+        onclick="limpiar();"
+        class="btnNuevaPartida"
+      />
+    </div>
+    <div class="puntajes">
+      <div class="puntajeUsuario">
+        <h2>Puntaje de Usuario:</h2>
+        <h2 id="lblPuntajeUsuario">0</h2>
+      </div>
+
+      <div class="puntajeComputadora">
+        <h2>Puntaje de Computadora:</h2>
+        <h2 id="lblPuntajeComputadora">0</h2>
+      </div>
+      <div class="resultado">
+        <h2>Resultado:</h2>
+        <h2 id="lblResultado"></h2>
+      </div>
+    </div>
+    <h1 id="lblGanador" class="ganador"></h1>
+  </body>
 </html>
