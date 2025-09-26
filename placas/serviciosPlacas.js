@@ -34,3 +34,79 @@ validarEstructura = function(placa){
     return !hayError;
 }
 
+obtenerProvincia = function(placa){
+    let provincia = "";
+    if(placa.charAt(0) == "A"){
+        provincia = "Azuay";
+    }
+    if(placa.charAt(0) == "B"){
+        provincia = "Bolivar";
+    }
+    if(placa.charAt(0) == "U"){
+        provincia = "Cañar";
+    }
+    if(placa.charAt(0) == "C"){
+        provincia = "Carchi";
+    }
+    if(placa.charAt(0) == "X"){
+        provincia = "Cotopaxi";
+    }
+    if(placa.charAt(0) == "H"){
+        provincia = "Chimborazo";
+    }
+    if(placa.charAt(0) == "O"){
+        provincia = "El Oro";
+    }
+    if(placa.charAt(0) == "E"){
+        provincia = "Esmeraldas";
+    }
+    if(placa.charAt(0) == "W"){
+        provincia = "Galápagos";
+    }
+    if(placa.charAt(0) == "G"){
+        provincia = "Guayas";
+    }
+    if(placa.charAt(0) == "I"){
+        provincia = "Imbabura";
+    }
+    if(placa.charAt(0) == "L"){
+        provincia = "Loja";
+    }
+    if(placa.charAt(0) == "R"){
+        provincia = "Los Rios";
+    }
+    if(placa.charAt(0) == "M"){
+        provincia = "Manabi";
+    }
+    if(placa.charAt(0) == "V"){
+        provincia = "Morona Santiago";
+    }
+    if(placa.charAt(0) == "N"){
+        provincia = "Napo";
+    }
+    if(placa.charAt(0) == "S"){
+        provincia = "Pastaza";
+    }
+    if(placa.charAt(0) == "P"){
+        provincia = "Pichincha";
+    }
+    if(placa.charAt(0) == "K"){
+        provincia = "Sucumbios";
+    }
+    if(placa.charAt(0) == "Q"){
+        provincia = "Orellana";
+    }
+    if(placa.charAt(0) == "T"){
+        provincia = "Tungurahua";
+    }
+    if(placa.charAt(0) == "Z"){
+        provincia = "Zamora Chinchipe";
+    }
+    if(placa.charAt(0) == "Y"){
+        provincia = "Santa Elena";
+    }
+    if(provincia == ""){
+        provincia = null;
+    }
+    return provincia;
+}
