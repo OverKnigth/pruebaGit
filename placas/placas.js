@@ -1,7 +1,7 @@
 validarPlaca = function(){
     let placa = recuperarTexto("txtPlaca")
     let erroresEstructura = validarEstructura(placa)
-    if(erroresEstructura == !false){
+    if(erroresEstructura == true){
         mostrarTexto("lblEstructuraValida", "Estructura Valida")
         mostrarTexto("lblDatos", "Datos:")
         let provincia = obtenerProvincia(placa)
