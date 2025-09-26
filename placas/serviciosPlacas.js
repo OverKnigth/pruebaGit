@@ -110,3 +110,21 @@ obtenerProvincia = function(placa){
     }
     return provincia;
 }
+
+obtenerTipoVehiculo = function(placa){
+    let vehiculo = "";
+    if(placa.charAt(1) == "A" || placa.charAt(1) == "Z"){
+        vehiculo = "Vehiculo Comercial (Taxi o Autobus)";
+    } else if(placa.charAt(1) == "E"){
+        vehiculo = "Vehiculo Gubernamental";
+    } else if(placa.charAt(1) == "X"){
+        vehiculo = "Vehiculo de Uso Oficial";
+    } else if(placa.charAt(1) == "S"){
+        vehiculo = "Vehiculo del Gobierno Provincial";
+    } else if(placa.charAt(1) == "M"){
+        vehiculo = "Vehiculo Municipal";
+    } else{
+        vehiculo = "Vehiculo Particular";
+    }
+    return vehiculo;
+}

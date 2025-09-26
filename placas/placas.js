@@ -9,6 +9,8 @@ validarPlaca = function(){
         } else{
             mostrarTexto("lblProvincia", provincia)
         }
+        let vehiculo = obtenerTipoVehiculo(placa)
+        mostrarTexto("lblVehiculo", vehiculo)
     } else{
         mostrarTexto("lblErrorEstructura", "Estructura Invalida")
     }
