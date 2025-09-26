@@ -19,4 +19,23 @@ jugar = function (seleccionado) {
   }
   mostrarTexto("lblPuntajeUsuario", puntosUsuario);
   mostrarTexto("lblPuntajeComputadora", puntosComputadora);
+
+  if(puntosUsuario == 5){
+    mostrarTexto("lblGanador", "GANASTE EL JUEGO");
+    limpiar();
+  }
+  if(puntosComputadora == 5){
+    mostrarTexto("lblGanador", "PERDISTE EL JUEGO");
+    limpiar();
+  }
+
 };
+
+limpiar = function(){
+    mostrarTexto("lblResultado", "");
+    mostrarImagen("imgComputadora", "");
+    mostrarTexto("lblPuntajeUsuario", "0");
+    mostrarTexto("lblPuntajeComputadora", "0");
+    puntosComputadora = 0;
+    puntosUsuario = 0;
+}
