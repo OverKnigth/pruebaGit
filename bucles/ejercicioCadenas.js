@@ -8,6 +8,18 @@ ejecutarPrueba2 = function(){
     invertirCadena(mensaje);
 }
 
+ejecutarPrueba3 = function(){
+    let mensaje = recuperarTexto("txtCadena");
+    let letra = recuperarTexto("txtLetra");
+    let resultado = buscarLetra(mensaje, letra);
+    mostrarTexto("lblPrueba2", resultado);
+}
+
+ejecutarPrueba4 = function(){
+    let mensaje = recuperarTexto("txtCadena");
+    contarMayusculas(mensaje);
+}
+
 recorrerCadena = function(cadena){
     let caracter = "";
     console.log("OPCION 1");
@@ -30,4 +42,33 @@ invertirCadena = function(cadena){
         mostrarTexto("lblPrueba2", resultado);
     }
     
+}
+
+buscarLetra = function(cadena, letra){
+    let caracter;
+    let existeLetra = false;
+    for(let posicion = 0; posicion < cadena.length;posicion++){
+        caracter = cadena.charAt(posicion);
+        if(caracter == letra){
+            existeLetra = true;
+        }
+    }
+    if(existeLetra == true){
+        return true;
+    } else{
+        return false;
+    }
+}
+
+contarMayusculas = function(cadena){
+    let letra;
+    let contadorMayusculas = 0;
+    for(i = 0; i < cadena.length; i++){
+        letra = cadena.charAt(i);
+        if(esMayuscula(letra)){
+            contadorMayusculas++;
+        }
+    }
+    console.log("Hay " + contadorMayusculas + " mayusculas en la cadena");
+
 }
