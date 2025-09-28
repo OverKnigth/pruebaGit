@@ -16,7 +16,7 @@ recorrerArreglo = function(){
 }
 
 probarAgregar = function(){
-    let notaRecuperada = recuperarInt("txtNota");
+    let notaRecuperada = recuperarFloat("txtNota");
     agregarNota(notaRecuperada);
     console.log(notas);
 }
@@ -24,4 +24,19 @@ probarAgregar = function(){
 agregarNota = function(nota){
     notas.push(nota);
     console.log(notas);
+}
+
+calcularPromedio = function(){
+    let sumaNotas = 0;
+    let promedio = 0;
+    for(let i = 0; i < notas.length; i++){
+        sumaNotas += notas[i];
+    }
+    promedio = sumaNotas / notas.length;
+    return promedio.toFixed(2);
+}
+
+ejecutarPromedio = function(){
+    let promedio = calcularPromedio();
+    mostrarTexto("lblPromedio", "El promedio  de las notas ingresadas es: " + promedio);
 }
