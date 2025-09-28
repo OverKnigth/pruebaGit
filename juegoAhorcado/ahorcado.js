@@ -77,6 +77,7 @@ ingresarLetra = function(){
         intentos++;
         if(coincidencias == 5){
             alert("GANASTE");
+            mostrarImagen("ahorcadoImagen", "ganador.gif");
         }
         if(intentos == 10){
             alert("PERDISTE");
