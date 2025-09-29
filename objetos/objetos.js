@@ -72,6 +72,10 @@ probarIncrementarSaldo = function(){
     console.log(cuenta.saldo);
 }
 
+incrementarSaldo = function(cuenta, monto){
+    cuenta.saldo += monto;
+}
+
 probarDeterminarMayor = function(){
     let persona1 = {
         nombre: "Romeo",
@@ -91,10 +95,6 @@ probarDeterminarMayor = function(){
     } else{
         console.log("Ambas personas tienen la misma edad");
     }
-}
-
-incrementarSaldo = function(cuenta, monto){
-    cuenta.saldo += monto;
 }
 
 determinarMayor = function(persona1, persona2){
