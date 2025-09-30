@@ -11,11 +11,7 @@ mostrarOpcionEmpleado = function(){
     ocultarComponente("divRol");
     ocultarComponente("divResumen");
     mostrarEmpleados();
-    deshabilitarComponente("txtCedula");
-    deshabilitarComponente("txtNombre");
-    deshabilitarComponente("txtApellido");
-    deshabilitarComponente("txtSueldo");
-    deshabilitarComponente("btnGuardar");
+    deshabilitar();
 }
 
 mostrarOpcionRol = function(){
@@ -55,11 +51,7 @@ mostrarEmpleados = function(){
 
 /* Habilitar Inputs */
 ejecutarNuevo = function(){
-    habilitarComponente("txtCedula");
-    habilitarComponente("txtNombre");
-    habilitarComponente("txtApellido");
-    habilitarComponente("txtSueldo");
-    habilitarComponente("btnGuardar");
+    habilitar();
     esNuevo = true;
 }
 
@@ -139,3 +131,19 @@ contarMayusculas = function(cadena){
     return todasMayusculas;
 }
 
+/* Deshabilitar Inputs */
+deshabilitar = function(){
+    deshabilitarComponente("txtCedula");
+    deshabilitarComponente("txtNombre");
+    deshabilitarComponente("txtApellido");
+    deshabilitarComponente("txtSueldo");
+    deshabilitarComponente("btnGuardar");
+}
+
+habilitar = function(){
+    habilitarComponente("txtCedula");
+    habilitarComponente("txtNombre");
+    habilitarComponente("txtApellido");
+    habilitarComponente("txtSueldo");
+    habilitarComponente("btnGuardar");
+}
