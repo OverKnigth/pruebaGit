@@ -62,3 +62,80 @@ ejecutarNuevo = function(){
     habilitarComponente("btnGuardar");
     esNuevo = true;
 }
+
+/* Buscar Empleado */
+buscarEmpleado = function(cedula){
+    let elementoEmpleado;
+    let empleadoEncontrado = null;
+    for(let i =0; i < empleados.length; i++){
+        elementoEmpleado = empleados[i];
+        if(elementoEmpleado.cedula == cedula){
+            empleadoEncontrado = elementoEmpleado;
+            break;
+        }
+    }
+    return empleadoEncontrado;
+}
+
+/* Agregar Empleado */
+agregarEmpleado = function(empleado){
+    let resultado = buscarEmpleado(empleado.cedula);
+    let agregado = false;
+    if(resultado == null){
+        empleados.push(empleado);
+        agregado = true;
+    }
+    return agregado;
+}
+
+/* Guardar */
+guardar = function(){
+    let cedula = recuperarTexto("txtCedula");
+    let nombre = recuperarTexto("txtNombre");
+    let apellido = recuperarTexto("txtApellido");
+    let sueldo = recuperarFloat("txtSueldo");
+    if(cedula.length != 10 || isNaN(cedula) == true){
+        mostrarTexto("lblErrorCedula", "DATOS INCORRECTOS, INGRESA UNA CEDULA VALIDA CON 10 DIGITOS");
+        esNuevo = false;
+    }
+    if(nombre.length < 3 || contarMayusculas(nombre) == false){
+        mostrarTexto("lblErrorNombre", "DATOS INCORRECTOS, INGRESA UN NOMBRE VALIDO Y EN MAYUSCULAS");
+        esNuevo = false;
+    }
+    if(apellido.length < 3 || contarMayusculas(apellido) == false){
+        mostrarTexto("lblErrorApellido", "DATOS INCORRECTOS, INGRESA UN APELLIDO VALIDO Y EN MAYUSCULAS");
+        esNuevo = false;
+    }
+    if(sueldo < 400 || sueldo > 5000){
+        mostrarTexto("lblErrorSueldo", "DATOS INCORRECTOS, INGRESA UN SUELDO VALIDO ENTRE 400 Y 5000");
+        esNuevo = false;
+    }
+
+    if(esNuevo == true){
+        let empleado = {};
+        empleado.cedula = cedula;
+        empleado.nombre = nombre;
+        empleado.apellido = apellido;
+        empleado.sueldo = sueldo;
+        let agregado = agregarEmpleado(empleado);
+        if(agregado == true){
+            alert("El empleado con la cedula: " + empleado.cedula + " fue agregado");
+            mostrarEmpleados();
+        } else {
+            alert("El empleado con la cedula: " + empleado.cedula + " ya existe");            
+        }
+    }
+}
+
+contarMayusculas = function(cadena){
+    let letra;
+    let todasMayusculas = true;
+    for(let i = 0; i < cadena.length; i++){
+        letra = cadena.charAt(i);
+        if(!esMayuscula(letra)){
+            todasMayusculas = false;
+        }
+    }
+    return todasMayusculas;
+}
+
