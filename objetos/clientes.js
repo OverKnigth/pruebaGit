@@ -88,7 +88,8 @@ mostrarClientes = function(){
     + "</tr>"
     for(let i = 0; i < clientes.length; i++){
         elementoCliente = clientes[i];
-        contendioTabla += "<tr><td>" + elementoCliente.cedula + "</td>"
+        contendioTabla += "<tr>"
+        + "<td>" + elementoCliente.cedula + "</td>"
         + "<td>" + elementoCliente.nombre + "</td>"
         + "<td>" + elementoCliente.edad +"</td>"
         + "</tr>"
