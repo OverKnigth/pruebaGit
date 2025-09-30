@@ -1,4 +1,3 @@
-
 mostrarImagen=function(idComponente,rutaImagen){
     let componente;
     componente=document.getElementById(idComponente);

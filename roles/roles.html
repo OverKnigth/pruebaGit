@@ -1,19 +1,24 @@
 <!DOCTYPE html>
 <html>
-  <head> </head>
-
-  <body>
+  <head> 
+    <link rel="stylesheet" href="roles.css">
+    <script src="utilitarios.js"></script>
+    <script src="roles.js"></script>
+  </head>
+  <body onload="mostrarOpcionEmpleado();">
+    <!-- Menu -->
     <div class="menu">
       <div class="contenedorBoton">
-        <input type="button" value="EMPLEADO" class="estiloBoton" />
+        <input type="button" value="EMPLEADO" class="estiloBoton" onclick="mostrarOpcionEmpleado();"/>
       </div>
       <div class="contenedorBoton">
-        <input type="button" value="ROL" class="estiloBoton" />
+        <input type="button" value="ROL" class="estiloBoton" onclick="mostrarOpcionRol();"/>
       </div>
       <div class="contenedorBoton">
-        <input type="button" value="RESUMEN" class="estiloBoton" />
+        <input type="button" value="RESUMEN" class="estiloBoton" onclick="mostrarOpcionResumen();"/>
       </div>
     </div>
+    <!-- Empleado -->
     <div id="divEmpleado">
       <div class="principal">
         <div class="area">
@@ -28,7 +33,6 @@
             <input type="button" value="BUSCAR" class="estiloBoton" />
           </div>
         </div>
-
         <div class="area">
           <div class="ingresoDatos">
             <div class="tituloCampo">CEDULA</div>
@@ -81,6 +85,7 @@
         </div>
       </div>
     </div>
+    <!-- Rol -->
     <div id="divRol">
       <div class="principal">
         <div class="area">
@@ -95,7 +100,6 @@
             <input type="button" value="BUSCAR" class="estiloBoton" />
           </div>
         </div>
-
         <div class="area">
           <div class="ingresoDatos">
             <div class="tituloCampo">CEDULA</div>
@@ -150,6 +154,7 @@
         </div>
       </div>
     </div>
+    <!-- Resumen -->
     <div id="divResumen">
       <div class="principal">
         <div class="area"></div>
