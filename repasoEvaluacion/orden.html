@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Repaso Prueba</title>
+    <link rel="stylesheet" href="orden.css" />
+    <script src="orden.js"></script>
+    <script src="utilitarios.js"></script>
+  </head>
+  <body onload="mostrarPersonas();">
+    <h1>Repaso Prueba</h1>
+    <div class="formulario">
+      <div class="tituloF">
+        <h2>Ingresa un nombre:</h2>
+      </div>
+      <input type="text" id="txtNombre" class="ingreso" />
+      <div class="tituloF">
+        <h2>Ingresa una edad:</h2>
+      </div>
+      <input type="text" id="txtEdad" class="ingreso" />
+      <div class="botones">
+        <input
+          type="button"
+          value="GUARDAR"
+          onclick="agregarPersona()"
+          class="btn1"
+        />
+        <input
+          type="button"
+          value="ENCONTRAR MAYOR"
+          class="btn2"
+          onclick="determinarMayor();"
+        />
+      </div>
+      <div class="botones">
+        <input
+          type="button"
+          value="ENCONTRAR MENOR"
+          class="btn3"
+          onclick="determinarMenor();"
+        />
+      </div>
+      <div class="resultados">
+        <h2 id="lblMayor" class="respuesta"></h2>
+      </div>
+      <div class="errores">
+        <h3 id="lblError1"></h3>
+        <h3 id="lblError2"></h3>
+        <h3 id="lblError3"></h3>
+        <h3 id="lblError4"></h3>
+        <h3 id="lblError5"></h3>
+      </div>
+    </div>
+    <div class="tabla">
+      <div id="divTabla"></div>
+    </div>
+  </body>
+</html>
